@@ -1,4 +1,8 @@
+import AppName from "./components/AppName";
+
 function App() {
-  return <h1> Expense Tracker App </h1>
+  return <>
+    <AppName></AppName>
+  </>
 }
 export default App;
