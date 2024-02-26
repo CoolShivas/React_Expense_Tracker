@@ -1,5 +1,8 @@
+import ExpenseAmount from "./ExpenseAmount";
+import ExpenseTitle from "./ExpenseTitle";
 import ExpenseDate from "./ExpenseDate";
 import styles from "./ExpenseItems.module.css";
+
 
 const ExpenseItems = (props) => {
 
@@ -14,10 +17,19 @@ const ExpenseItems = (props) => {
             ></ExpenseDate>
         </div>
         <div className={styles.expense_item__description}>
-            {props.titleABC}
+            {/* {props.titleABC} */}
+
+            <ExpenseTitle
+                titleXYZ={props.titleABC}
+            ></ExpenseTitle>
+
         </div>
         <div className={styles.expense_item__amount}>
-            {props.amountABC}
+            {/* ₹ {props.amountABC} */}
+
+            <ExpenseAmount
+                amountXYZ={props.amountABC}
+            ></ExpenseAmount>
         </div>
     </div>
 }
