@@ -1,5 +1,5 @@
 import AppName from "./components/AppName";
-import ExpenseItems from "./components/ExpenseItems";
+import IndividualExpense from "./components/IndividualExpense";
 
 function App() {
   const expenses = [
@@ -27,32 +27,24 @@ function App() {
       amount: 1294.12,
       date: new Date(2023, 9, 21),
     },
+    {
+      id: "e5",
+      title: "farmer insurance",
+      amount: 350,
+      date: new Date(2024, 12, 29),
+    },
   ];
   return <>
     <AppName></AppName>
-    <ExpenseItems
+    {/* <ExpenseItems
       titleABC={expenses[0].title}
       amountABC={expenses[0].amount}
       dateABC={expenses[0].date}
-    ></ExpenseItems>
+    ></ExpenseItems> */}
 
-    <ExpenseItems
-      titleABC={expenses[1].title}
-      amountABC={expenses[1].amount}
-      dateABC={expenses[1].date}
-    ></ExpenseItems>
-
-    <ExpenseItems
-      titleABC={expenses[2].title}
-      amountABC={expenses[2].amount}
-      dateABC={expenses[2].date}
-    ></ExpenseItems>
-
-    <ExpenseItems
-      titleABC={expenses[3].title}
-      amountABC={expenses[3].amount}
-      dateABC={expenses[3].date}
-    ></ExpenseItems>
+    <IndividualExpense
+      expensesABC={expenses}
+    ></IndividualExpense>
   </>
 }
 export default App;
