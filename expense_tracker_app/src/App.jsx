@@ -1,3 +1,4 @@
+import Card from "./UI/Card";
 import AppName from "./components/AppName";
 import IndividualExpense from "./components/IndividualExpense";
 
@@ -34,7 +35,7 @@ function App() {
       date: new Date(2024, 12, 29),
     },
   ];
-  return <>
+  return <Card>
     <AppName></AppName>
     {/* <ExpenseItems
       titleABC={expenses[0].title}
@@ -45,6 +46,6 @@ function App() {
     <IndividualExpense
       expensesABC={expenses}
     ></IndividualExpense>
-  </>
+  </Card>
 }
 export default App;
