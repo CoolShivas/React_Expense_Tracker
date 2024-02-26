@@ -2,13 +2,18 @@ import ExpenseAmount from "./ExpenseAmount";
 import ExpenseTitle from "./ExpenseTitle";
 import ExpenseDate from "./ExpenseDate";
 import styles from "./ExpenseItems.module.css";
+import { useState } from "react";
 
 
 const ExpenseItems = (props) => {
 
-    // const date = new Date(2021, 2, 12);
-    // const title = "auto insurance";
-    // const amount = 2561;
+    const [valAddAmount, setAddAmount] = useState(props.amountABC)
+
+    const handleOnClickAdd = () => {
+        console.log("Adding the amount");
+        const addAmt = 100;
+        setAddAmount(addAmt);
+    }
 
     return <div className={styles.expense_item}>
         <div>
@@ -28,14 +33,24 @@ const ExpenseItems = (props) => {
             {/* ₹ {props.amountABC} */}
 
             <ExpenseAmount
-                amountXYZ={props.amountABC}
+                // amountXYZ={props.amountABC}
+                amountXYZ={valAddAmount}
+                onChange={handleOnClickAdd}
             ></ExpenseAmount>
         </div>
 
-        <button type="button"
+        <button
+            type="button"
             onClick={() => props.handleOnClickDeleteXYZ(props.titleABC)}
-        > DELETE </button>
+        >
+            DELETE
+        </button>
 
+        <button
+            onClick={handleOnClickAdd}
+        >
+            ADD
+        </button>
     </div>
 }
 
