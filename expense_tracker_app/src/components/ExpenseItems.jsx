@@ -31,6 +31,11 @@ const ExpenseItems = (props) => {
                 amountXYZ={props.amountABC}
             ></ExpenseAmount>
         </div>
+
+        <button type="button"
+            onClick={() => props.handleOnClickDeleteXYZ(props.titleABC)}
+        > DELETE </button>
+
     </div>
 }
 

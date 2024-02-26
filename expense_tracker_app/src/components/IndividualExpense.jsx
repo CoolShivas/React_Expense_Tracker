@@ -1,6 +1,6 @@
 import ExpenseItems from "./ExpenseItems";
 
-const IndividualExpense = ({ expensesABC }) => {
+const IndividualExpense = ({ expensesABC, handleOnClickDeleteABC }) => {
   return <>
     {expensesABC.map((arr) => {
       return <ExpenseItems
@@ -8,6 +8,7 @@ const IndividualExpense = ({ expensesABC }) => {
         titleABC={arr.title}
         amountABC={arr.amount}
         dateABC={arr.date}
+        handleOnClickDeleteXYZ={handleOnClickDeleteABC}
       ></ExpenseItems>
     })}
 

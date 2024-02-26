@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Card from "./UI/Card";
 import AppName from "./components/AppName";
 import IndividualExpense from "./components/IndividualExpense";
@@ -35,17 +36,24 @@ function App() {
       date: new Date(2024, 12, 29),
     },
   ];
+
+  const [valExpenses, setExpenses] = useState(expenses);
+
+  const handleOnClickDelete = (titleName) => {
+    console.log(`Are you sure to delete ${titleName}`);
+    const delBtn = valExpenses.filter((brr) => brr.title !== titleName);
+    setExpenses(delBtn);
+  }
+
   return <Card>
     <AppName></AppName>
-    {/* <ExpenseItems
-      titleABC={expenses[0].title}
-      amountABC={expenses[0].amount}
-      dateABC={expenses[0].date}
-    ></ExpenseItems> */}
 
     <IndividualExpense
-      expensesABC={expenses}
+      // expensesABC={expenses}
+      expensesABC={valExpenses}
+      handleOnClickDeleteABC={handleOnClickDelete}
     ></IndividualExpense>
+
   </Card>
 }
 export default App;
