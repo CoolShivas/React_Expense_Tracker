@@ -4,11 +4,11 @@ import ExpenseForm from "./ExpenseForm";
 const NewExp = ({ handleOnClickAddABC }) => {
 
     const saveDetailsOfNewExp = (enteredData) => {
-        const dataNew = {
+        const newExpData = {
             ...enteredData,
             id: Math.random().toString(),
         }
-        handleOnClickAddABC(dataNew)
+        handleOnClickAddABC(newExpData)
     }
 
     return <div>

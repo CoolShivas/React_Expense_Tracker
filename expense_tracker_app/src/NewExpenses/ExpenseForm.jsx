@@ -8,23 +8,20 @@ const ExpenseForm = ({ saveDetailsOfNewExpABC }) => {
     const [valDate, setDate] = useState('');
 
     const handlerOnTitle = (event) => {
-        console.log(event.target.value);
         setTitle(event.target.value);
     }
 
     const handlerOnAmount = (event) => {
-        console.log(event.target.value);
         setAmount(event.target.value);
     }
 
     const handlerOnDate = (event) => {
-        console.log(event.target.value);
         setDate(event.target.value);
     }
 
     const handlerOnSubmitForm = (event) => {
         event.preventDefault();
-        console.log('Eneter')
+
         const newExpData = {
             title: valTitle,
             amount: valAmount,

@@ -1,0 +1,18 @@
+.expense_filter {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.headingSecond {
+    color: white;
+    margin: 16px;
+    font-size: 30px;
+}
+
+#selYear {
+    padding: 3px;
+    height: 30px;
+    margin: 16px;
+    font-size: 20px;
+}

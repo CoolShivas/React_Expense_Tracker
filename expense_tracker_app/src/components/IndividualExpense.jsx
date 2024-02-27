@@ -1,7 +1,9 @@
 import ExpenseItems from "./ExpenseItems";
+import ExpenseFilter from "./ExpenseFilter";
 
 const IndividualExpense = ({ expensesABC, handleOnClickDeleteABC }) => {
   return <>
+    <ExpenseFilter></ExpenseFilter>
     {expensesABC.map((arr) => {
       return <ExpenseItems
         key={arr.title}
@@ -11,20 +13,6 @@ const IndividualExpense = ({ expensesABC, handleOnClickDeleteABC }) => {
         handleOnClickDeleteXYZ={handleOnClickDeleteABC}
       ></ExpenseItems>
     })}
-
-
-    {/* <ExpenseItems
-      titleABC={expenses[2].title}
-      amountABC={expenses[2].amount}
-      dateABC={expenses[2].date}
-    ></ExpenseItems>
-
-    <ExpenseItems
-      titleABC={expenses[3].title}
-      amountABC={expenses[3].amount}
-      dateABC={expenses[3].date}
-    ></ExpenseItems> */}
-
   </>
 }
 

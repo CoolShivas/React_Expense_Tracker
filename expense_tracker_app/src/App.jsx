@@ -46,9 +46,9 @@ function App() {
     setExpenses(delBtn);
   }
 
-  const handleOnClickAdd = (dataNew) => {
-    console.log(`Everthing is entered ${dataNew}`);
-    setExpenses([...valExpenses, dataNew]);
+  const handleOnClickAdd = (crr) => {
+    console.log(`Everthing is entered ${crr}`);
+    setExpenses([...valExpenses, crr]);
   }
 
 
