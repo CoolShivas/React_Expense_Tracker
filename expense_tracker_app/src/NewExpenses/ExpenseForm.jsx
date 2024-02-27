@@ -49,7 +49,7 @@ const ExpenseForm = ({ saveDetailsOfNewExpABC }) => {
 
             <div className={styles.new_expense_control}>
                 <label> Expense Date </label>
-                <input type="date" min="2019-01-01" max="2022-12-31" onChange={handlerOnDate} value={valDate} />
+                <input type="date" min="2018-01-01" max="2024-12-31" onChange={handlerOnDate} value={valDate} />
             </div>
 
             <div className={styles.new_expense_actions}>
