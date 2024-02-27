@@ -1,9 +1,18 @@
 import ExpenseForm from "./ExpenseForm";
-import styles from "./NewExp.module.css";
 
-const NewExp = () => {
-    return <div className={styles.new_expense}>
-        <ExpenseForm></ExpenseForm>
+
+const NewExp = ({ handleOnClickAddABC }) => {
+
+    const saveDetailsOfNewExp = (enteredData) => {
+        const dataNew = {
+            ...enteredData,
+            id: Math.random().toString(),
+        }
+        handleOnClickAddABC(dataNew)
+    }
+
+    return <div>
+        <ExpenseForm saveDetailsOfNewExpABC={saveDetailsOfNewExp}></ExpenseForm>
     </div>
 }
 

@@ -46,9 +46,15 @@ function App() {
     setExpenses(delBtn);
   }
 
+  const handleOnClickAdd = (dataNew) => {
+    console.log(`Everthing is entered ${dataNew}`);
+    setExpenses([...valExpenses, dataNew]);
+  }
+
+
   return <Card>
     <AppName></AppName>
-    <NewExp></NewExp>
+    <NewExp handleOnClickAddABC={handleOnClickAdd}></NewExp>
     <IndividualExpense
       // expensesABC={expenses}
       expensesABC={valExpenses}
