@@ -1,3 +1,4 @@
+import NewExp from "./NewExpenses/NewExp";
 import { useState } from "react";
 import Card from "./UI/Card";
 import AppName from "./components/AppName";
@@ -47,7 +48,7 @@ function App() {
 
   return <Card>
     <AppName></AppName>
-
+    <NewExp></NewExp>
     <IndividualExpense
       // expensesABC={expenses}
       expensesABC={valExpenses}
