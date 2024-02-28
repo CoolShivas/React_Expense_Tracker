@@ -1,3 +1,4 @@
+import ExpenseChart from "./ExpenseChart";
 import styles from "./IndividualExpense.module.css";
 import { useState } from "react";
 import ExpenseItems from "./ExpenseItems";
@@ -19,6 +20,8 @@ const IndividualExpense = ({ expensesABC, handleOnClickDeleteABC }) => {
 
   return <>
     <ExpenseFilter choosenYear={filteredYear} handlerForFilteringYearABC={handlerForFilteringYear}></ExpenseFilter>
+
+    <ExpenseChart filteringYearForDataABC={filteringYearForData}></ExpenseChart>
 
     {filteringYearForData.length === 0 && <p className={styles.paragraph}> No expenses to display. </p>}
 
