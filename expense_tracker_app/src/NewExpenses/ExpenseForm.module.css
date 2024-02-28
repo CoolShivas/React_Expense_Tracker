@@ -31,3 +31,15 @@
 .new_expense button.alternative:active {
     background-color: #ddb3f8;
 }
+
+
+input {
+    width: 90%;
+    min-width: 20%;
+    height: 25px;
+}
+
+label {
+    font-size: 20px;
+    font-weight: bold;
+}

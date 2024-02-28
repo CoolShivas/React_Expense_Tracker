@@ -1,3 +1,4 @@
+import styles from "./IndividualExpense.module.css";
 import { useState } from "react";
 import ExpenseItems from "./ExpenseItems";
 import ExpenseFilter from "./ExpenseFilter";
@@ -15,6 +16,11 @@ const IndividualExpense = ({ expensesABC, handleOnClickDeleteABC }) => {
 
   return <>
     <ExpenseFilter choosenYear={filteredYear} handlerForFilteringYearABC={handlerForFilteringYear}></ExpenseFilter>
+
+    {filteringYearForData.length === 0 && <p className={styles.paragraph}> No expenses to display. </p>}
+
+    {filteringYearForData.length === 1 && <p className={styles.paragraph}> Only single expense available here. </p>}
+
     {filteringYearForData.map((arr) => {
       return <ExpenseItems
         key={arr.title}
