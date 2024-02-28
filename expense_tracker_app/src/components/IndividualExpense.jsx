@@ -14,6 +14,9 @@ const IndividualExpense = ({ expensesABC, handleOnClickDeleteABC }) => {
 
   const filteringYearForData = expensesABC.filter((drr) => drr.date.getFullYear().toString() === filteredYear)
 
+
+
+
   return <>
     <ExpenseFilter choosenYear={filteredYear} handlerForFilteringYearABC={handlerForFilteringYear}></ExpenseFilter>
 

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import styles from "./ExpenseForm.module.css";
 
-const ExpenseForm = ({ saveDetailsOfNewExpABC }) => {
+const ExpenseForm = ({ saveDetailsOfNewExpABC, handlerStopEditorABC }) => {
 
     const [valTitle, setTitle] = useState('');
     const [valAmount, setAmount] = useState('');
@@ -54,7 +54,9 @@ const ExpenseForm = ({ saveDetailsOfNewExpABC }) => {
 
             <div className={styles.new_expense_actions}>
                 <button type="submit"> Add Expense </button>
+                <button type="button" onClick={handlerStopEditorABC}> Cancel </button>
             </div>
+
         </div>
     </form>
 }
